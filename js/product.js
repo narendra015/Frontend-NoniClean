@@ -9,22 +9,31 @@ const Product = [
     jumlah: 10,
   },
   {
-    id: 2,
-    name: "karbol",
-    description: "Cairan pembersih lantai kamar mandi yang mengandung disinfectant dengan aroma yang menyegarkan. Tersedia aroma lemon, sereh dan pinus",
-    image: "gambar/karbol.png",
+    id_product: 2,
+    nama_product: "karbol",
+    foto: "gambar/karbol.png",
+    harga: 30000,
+    kategori: "Home Care",
+    deskripsi: "Cairan pembersih lantai kamar mandi yang mengandung disinfectant dengan aroma yang menyegarkan. Tersedia aroma lemon, sereh dan pinus",
+    jumlah: 10,
   },
   {
-    id: 3,
-    name: "Dishwashing",
-    description: "Sabun pencuci piring dengan keharuman yang menyegarkan, mampu membersihkan noda & lemak di piring atau peralatan dapur dengan cepat",
-    image: "gambar/Dishwashing.png",
+    id_product: 3,
+    nama_product: "Dishwashing",
+    foto: "gambar/Dishwashing.png",
+    harga: 30000,
+    kategori: "Home Care",
+    deskripsi: "Sabun pencuci piring dengan keharuman yang menyegarkan, mampu membersihkan noda & lemak di piring atau peralatan dapur dengan cepat",
+    
   },
   {
-    id: 4,
-    name: "Disinfectant",
-    description: "Cairan disinfectant yang ampuh membunuh bakteri",
-    image: "gambar/Disinfectant.png",
+    id_product: 4,
+    nama_product: "Disinfectant",
+    foto: "gambar/Disinfectant.png",
+    harga: 30000,
+    kategori: "Home Care",
+    deskripsi: "Cairan disinfectant yang ampuh membunuh bakteri",
+    jumlah: 10,
   },
 
 ];
@@ -36,16 +45,16 @@ function createProductCard(product) {
   card.innerHTML = `
     <div class="add-actives">
       <div class="card-image">
-        <img src="${product.image}" alt="${product.name}" class="img">
+        <img src="${product.foto}" alt="${product.nama_product}" class="img">
       </div>
       <div class="card-body">
         <div class="card-text">
-          <p>${product.name}</p>
-          <h4>${product.description}</h4>
+          <p>${product.nama_product}</p>
+          <h4>${product.deskripsi}</h4>
         </div>
       </div>
-      <a onclick="toggleIcon('heartIcon${product.id}', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
-        <i id="heartIcon${product.id}" class="fa-regular fa-heart" style="color: #ff0000;"></i>
+      <a onclick="toggleIcon('heartIcon${product.id_product}', 'fa-regular', 'fa-solid', '#db0f0f')" class="icon">
+        <i id="heartIcon${product.id_product}" class="fa-regular fa-heart" style="color: #ff0000;"></i>
       </a>
       <a class="icon" href="detail-product.html"><i class="bi bi-cart3" style="color: #93019d;"></i></a>
     </div>
