@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             row.innerHTML = `
                 <td>${product.id_product}</td>
                 <td>${product.nama_product}</td>
-                <td><img src="${product.foto}" alt="Foto Produk" width="50"></td>
+                <td><img src="gambar/${product.foto}" alt="Foto Produk" width="50"></td>
                 <td>${product.harga}</td>
                 <td>${product.kategori}</td>
                 <td>${product.deskripsi}</td>
