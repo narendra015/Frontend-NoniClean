@@ -39,6 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     <li class="nav-item"></li>
                     <a class="nav-link" href="contact.html">Contact</a>
                     </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link" href="listproduct.html">List Product</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" aria-disabled="true"></a>
                     </li>
