@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const data = await response.json();
         data.data.forEach(product => {
             const row = document.createElement('tr');
-
+            
             row.innerHTML = `
                 <td>${product.id_product}</td>
                 <td>${product.nama_product}</td>
@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <td>${product.deskripsi}</td>
                 <td>${product.jumlah}</td>
                 <td>
-                    <button class="btn btn-primary btn-sm" onclick="editProduct(${product.id_product})">Edit</button>
-                    <button class="btn btn-danger btn-sm" onclick="deleteProduct(${product.id_product})">Delete</button>
+                    <a href="editProduct.html"><button class="btn btn-primary btn-sm" onclick="editProduct(${product.id_product})">Edit</button></a>
+                    <a href="deleteProduct.html"><button class="btn btn-danger btn-sm" onclick="deleteProduct(${product.id_product})">Delete</button></a>
                 </td>
             `;
             productList.appendChild(row);
